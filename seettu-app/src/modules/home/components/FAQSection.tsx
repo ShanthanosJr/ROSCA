@@ -50,27 +50,27 @@ export function FAQSection() {
   }, []);
 
   return (
-    <section id="faq" className="py-20 md:py-32 bg-[#F4F3F1]">
+    <section id="faq" className="py-20 md:py-32 bg-off-white">
       <div ref={ref} className="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-24">
         <div className={`grid grid-cols-1 lg:grid-cols-[1fr_1.5fr] gap-12 lg:gap-16 ${
           isVisible ? 'animate-fade-in-up' : 'opacity-0'
         }`}>
           {/* Left column — §6.9 */}
           <div className="lg:sticky lg:top-32 lg:self-start">
-            <p className="text-xs font-medium uppercase tracking-[0.2em] text-[#8A8F98] mb-3">
+            <p className="text-xs font-medium uppercase tracking-[0.2em] text-muted-gray mb-3">
               FAQ
             </p>
             <h2
-              className="text-[clamp(1.75rem,4vw,2.75rem)] font-bold leading-tight text-[#141A22] mb-6"
+              className="text-[clamp(1.75rem,4vw,2.75rem)] font-bold leading-tight text-navy-ink mb-6"
               style={{ fontFamily: 'var(--font-display)' }}
             >
               Frequently{' '}
-              <em style={{ fontFamily: 'var(--font-accent)', fontStyle: 'italic', color: '#3DDC97' }}>
+              <em className="text-accent" style={{ fontFamily: 'var(--font-accent)', fontStyle: 'italic' }}>
                 asked
               </em>{' '}
               questions
             </h2>
-            <p className="text-[#8A8F98] text-sm leading-relaxed mb-8">
+            <p className="text-muted-gray text-sm leading-relaxed mb-8">
               Everything you need to know about using Seettu for your savings circle. Can't find what you're looking for? Reach out to us.
             </p>
 
@@ -80,17 +80,17 @@ export function FAQSection() {
                 {['KF', 'NP', 'AS'].map((initials, i) => (
                   <div
                     key={initials}
-                    className="w-8 h-8 rounded-full bg-[#141A22] text-white text-[10px] font-bold flex items-center justify-center border-2 border-[#F4F3F1]"
+                    className="w-8 h-8 rounded-full bg-navy-ink text-white text-[10px] font-bold flex items-center justify-center border-2 border-off-white"
                     style={{ zIndex: 3 - i }}
                   >
                     {initials}
                   </div>
                 ))}
               </div>
-              <span className="text-sm text-[#141A22] font-medium">Still have questions?</span>
+              <span className="text-sm text-navy-ink font-medium">Still have questions?</span>
               <a
                 href="#contact"
-                className="w-8 h-8 rounded-full bg-[#141A22] text-white flex items-center justify-center no-underline hover:bg-[#3DDC97] transition-colors duration-200"
+                className="w-8 h-8 rounded-full bg-navy-ink text-white flex items-center justify-center no-underline hover:bg-accent transition-colors duration-200"
                 aria-label="Contact us"
               >
                 <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -111,11 +111,11 @@ export function FAQSection() {
                   onClick={() => setOpenIndex(openIndex === i ? null : i)}
                   className="w-full flex items-center justify-between px-7 py-5 bg-transparent border-none cursor-pointer text-left"
                 >
-                  <span className="text-[15px] font-semibold text-[#141A22] pr-4">{faq.question}</span>
+                  <span className="text-[15px] font-semibold text-navy-ink pr-4">{faq.question}</span>
                   {/* Diagonal arrow — §5: rotates on expand */}
                   <span
-                    className={`flex-shrink-0 w-8 h-8 rounded-full bg-[#F4F3F1] flex items-center justify-center transition-all duration-300 ${
-                      openIndex === i ? 'rotate-180 bg-[#3DDC97]/15' : ''
+                    className={`flex-shrink-0 w-8 h-8 rounded-full bg-off-white flex items-center justify-center transition-all duration-300 ${
+                      openIndex === i ? 'rotate-180 bg-accent/15' : ''
                     }`}
                   >
                     <svg
@@ -123,7 +123,7 @@ export function FAQSection() {
                       height="14"
                       viewBox="0 0 14 14"
                       fill="none"
-                      stroke={openIndex === i ? '#3DDC97' : '#141A22'}
+                      className={openIndex === i ? 'stroke-accent' : 'stroke-navy-ink'}
                       strokeWidth="2"
                       strokeLinecap="round"
                       strokeLinejoin="round"
@@ -143,7 +143,7 @@ export function FAQSection() {
                 >
                   <div className="px-7 pb-6">
                     <div className="h-px bg-[rgba(20,26,34,0.06)] mb-4" />
-                    <p className="text-sm text-[#8A8F98] leading-relaxed">{faq.answer}</p>
+                    <p className="text-sm text-muted-gray leading-relaxed">{faq.answer}</p>
                   </div>
                 </div>
               </div>

@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { Button } from '../../../design-system/components/Button';
+import { Badge } from '../../../design-system/components/Badge';
 
 /**
  * Listings Section (Groups) — Style Guide §6.4 property-card pattern
@@ -80,21 +82,21 @@ export function ListingsSection() {
   const filteredGroups = GROUPS.filter(g => filter === 'ALL' || g.status === filter);
 
   return (
-    <section id="groups" className="py-24 md:py-32 bg-[#F4F3F1]">
+    <section id="groups" className="py-24 md:py-32 bg-off-white relative z-10 -mt-16 md:-mt-32">
       <div className="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-24">
         
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
           <div>
-            <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#8A8F98] mb-3">
+            <p className="text-sm font-medium uppercase tracking-[0.2em] text-muted-gray mb-3">
               Groups
             </p>
             <h2
-              className="text-[clamp(2rem,5vw,3rem)] font-bold leading-[1.1] text-[#141A22]"
+              className="text-[clamp(2rem,5vw,3rem)] font-bold leading-[1.1] text-navy-ink"
               style={{ fontFamily: 'var(--font-display)' }}
             >
               Explore active savings{' '}
-              <em style={{ fontFamily: 'var(--font-accent)', fontStyle: 'italic', color: '#3DDC97' }}>
+              <em className="text-accent" style={{ fontFamily: 'var(--font-accent)', fontStyle: 'italic' }}>
                 circles
               </em>
             </h2>
@@ -108,8 +110,8 @@ export function ListingsSection() {
                 onClick={() => setFilter(t as any)}
                 className={`px-6 py-2.5 rounded-[999px] text-[13px] font-bold tracking-wide transition-all duration-200 ${
                   filter === t
-                    ? 'bg-[#141A22] text-white shadow-md'
-                    : 'bg-transparent text-[#8A8F98] hover:text-[#141A22]'
+                    ? 'bg-navy-ink text-white shadow-md'
+                    : 'bg-transparent text-muted-gray hover:text-navy-ink'
                 }`}
               >
                 {t}
@@ -134,26 +136,26 @@ export function ListingsSection() {
                   className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                 />
                 <div className="absolute top-4 right-4 flex gap-2">
-                  <span className="px-3 py-1.5 rounded-[999px] bg-[#E7B24D] text-white text-[11px] font-bold tracking-wider">
+                  <Badge className="bg-mustard-tag text-white px-3 py-1.5">
                     {group.frequency}
-                  </span>
-                  <span className="px-3 py-1.5 rounded-[999px] bg-white text-[#141A22] text-[11px] font-bold tracking-wider">
+                  </Badge>
+                  <Badge className="bg-white text-navy-ink px-3 py-1.5">
                     {group.status}
-                  </span>
+                  </Badge>
                 </div>
               </div>
 
               {/* Card Body */}
               <div className="p-6 md:p-8">
                 <h3
-                  className="text-2xl font-bold text-[#141A22] mb-2"
+                  className="text-2xl font-bold text-navy-ink mb-2"
                   style={{ fontFamily: 'var(--font-display)' }}
                 >
                   {group.title}
                 </h3>
                 
                 {/* Location Line */}
-                <div className="flex items-center text-[#8A8F98] mb-6">
+                <div className="flex items-center text-muted-gray mb-6">
                   <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.242-4.243a8 8 0 1111.314 0z" />
                     <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -166,13 +168,13 @@ export function ListingsSection() {
                 {/* Metadata Row */}
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-5">
-                    <div className="flex items-center gap-2 text-[#141A22]">
+                    <div className="flex items-center gap-2 text-navy-ink">
                       <svg className="w-4 h-4 opacity-50" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
                       </svg>
                       <span className="text-[13px] font-semibold">{group.members}</span>
                     </div>
-                    <div className="flex items-center gap-2 text-[#141A22]">
+                    <div className="flex items-center gap-2 text-navy-ink">
                       <svg className="w-4 h-4 opacity-50" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
@@ -180,7 +182,7 @@ export function ListingsSection() {
                     </div>
                   </div>
                   <div className="text-right">
-                    <span className="block text-[15px] font-bold text-[#141A22]">{group.contribution}</span>
+                    <span className="block text-[15px] font-bold text-navy-ink">{group.contribution}</span>
                   </div>
                 </div>
               </div>
@@ -190,9 +192,9 @@ export function ListingsSection() {
 
         {/* View All Button */}
         <div className="mt-16 flex justify-center">
-          <button className="inline-flex items-center h-[52px] px-8 rounded-[999px] bg-[#141A22] text-white text-[15px] font-semibold transition-transform hover:scale-[1.02]">
+          <Button variant="secondary" className="inline-flex items-center h-[52px] px-8 text-[15px] transition-transform hover:scale-[1.02]">
             View All Groups
-          </button>
+          </Button>
         </div>
       </div>
     </section>

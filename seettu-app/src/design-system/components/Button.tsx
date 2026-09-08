@@ -7,8 +7,8 @@ interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const variantClasses: Record<Variant, string> = {
-  primary: 'bg-accent text-canvas hover:opacity-90',
-  secondary: 'bg-surface2 text-white border border-white/10',
+  primary: 'bg-accent text-navy-ink hover:opacity-90',
+  secondary: 'bg-navy-ink text-white border border-white/10',
   ghost: 'bg-transparent text-accentAlt',
   danger: 'bg-danger text-white',
 };

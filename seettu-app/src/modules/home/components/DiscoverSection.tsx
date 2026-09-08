@@ -43,7 +43,7 @@ export function DiscoverSection() {
   }, []);
 
   return (
-    <section id="how-it-works" className="relative py-24 md:py-32 overflow-hidden bg-[#C7DBE3]">
+    <section id="how-it-works" className="relative py-24 md:py-32 overflow-hidden bg-powder-blue">
       
       {/* Giant Ghost Text */}
       <div 
@@ -61,7 +61,7 @@ export function DiscoverSection() {
             {steps.map((step, i) => (
               <div
                 key={step.number}
-                className={`bg-[#141A22] rounded-[24px] p-8 md:p-10 shadow-2xl transition-all duration-700 hover:-translate-y-1 ${
+                className={`bg-navy-ink rounded-[24px] p-8 md:p-10 shadow-2xl transition-all duration-700 hover:-translate-y-1 ${
                   isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
                 }`}
                 style={{
@@ -73,9 +73,9 @@ export function DiscoverSection() {
                   <h3 className="text-white text-2xl font-bold" style={{ fontFamily: 'var(--font-display)' }}>
                     {step.title}
                   </h3>
-                  <span className="text-[#3DDC97] text-xl font-bold">{step.number}</span>
+                  <span className="text-accent text-xl font-bold">{step.number}</span>
                 </div>
-                <p className="text-[#8A8F98] leading-relaxed text-[15px]">
+                <p className="text-muted-gray leading-relaxed text-[15px]">
                   {step.description}
                 </p>
               </div>
@@ -85,16 +85,16 @@ export function DiscoverSection() {
           {/* Right Column: Title and Image */}
           <div className="lg:col-span-7 flex flex-col lg:pl-12">
             <div className={`transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
-              <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#3E7B8C] mb-4">
+              <p className="text-sm font-medium uppercase tracking-[0.2em] text-teal-deep mb-4">
                 About Us
               </p>
-              <h2 className="text-[clamp(2.5rem,5vw,3.5rem)] font-bold text-[#141A22] leading-[1.1] mb-6" style={{ fontFamily: 'var(--font-display)' }}>
+              <h2 className="text-[clamp(2.5rem,5vw,3.5rem)] font-bold text-navy-ink leading-[1.1] mb-6" style={{ fontFamily: 'var(--font-display)' }}>
                 We make community savings{' '}
-                <em style={{ fontFamily: 'var(--font-accent)', fontStyle: 'italic', color: 'rgba(20,26,34,0.7)' }}>
+                <em className="text-navy-ink/70" style={{ fontFamily: 'var(--font-accent)', fontStyle: 'italic' }}>
                   transparent
                 </em>
               </h2>
-              <p className="text-lg text-[#141A22]/70 leading-relaxed mb-12 max-w-xl">
+              <p className="text-lg text-navy-ink/70 leading-relaxed mb-12 max-w-xl">
                 Seettu digitizes traditional ROSCA savings groups. With automated tracking, transparent ledgers, and verified members, we're bringing community trust to the digital age.
               </p>
             </div>

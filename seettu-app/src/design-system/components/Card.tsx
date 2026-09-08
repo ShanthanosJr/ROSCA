@@ -17,7 +17,7 @@ export function Card({ status = 'none', className, children, ...props }: Props) 
   return (
     <div
       className={clsx(
-        'bg-surface1 rounded-lg p-5 border border-white/5 border-l-4',
+        'bg-white rounded-lg p-5 border border-navy-ink/5 border-l-4 shadow-sm',
         statusBorderColors[status],
         className
       )}

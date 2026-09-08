@@ -47,10 +47,10 @@ export function TeamSection() {
   }, []);
 
   return (
-    <section id="team" className="relative py-24 md:py-32 overflow-hidden" style={{ background: '#EAF2F5' }}>
+    <section id="team" className="relative py-24 md:py-32 overflow-hidden bg-powder-blue/30">
       {/* Background ghost text */}
       <div 
-        className="absolute top-20 left-1/2 -translate-x-1/2 text-[clamp(8rem,20vw,24rem)] font-extrabold text-[#3E7B8C]/5 select-none pointer-events-none leading-none tracking-tighter"
+        className="absolute top-20 left-1/2 -translate-x-1/2 text-[clamp(8rem,20vw,24rem)] font-extrabold text-teal-deep/5 select-none pointer-events-none leading-none tracking-tighter"
         style={{ fontFamily: 'var(--font-display)' }}
       >
         Organizers
@@ -60,15 +60,15 @@ export function TeamSection() {
         
         {/* Section Header */}
         <div className="text-center mb-16 md:mb-24">
-          <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#3E7B8C] mb-4">
+          <p className="text-sm font-medium uppercase tracking-[0.2em] text-teal-deep mb-4">
             Team
           </p>
           <h2
-            className="text-[clamp(2.5rem,5vw,3.5rem)] font-bold leading-[1.1] text-[#141A22]"
+            className="text-[clamp(2.5rem,5vw,3.5rem)] font-bold leading-[1.1] text-navy-ink"
             style={{ fontFamily: 'var(--font-display)' }}
           >
             Meet our{' '}
-            <em style={{ fontFamily: 'var(--font-accent)', fontStyle: 'italic', color: '#3E7B8C' }}>
+            <em className="text-teal-deep" style={{ fontFamily: 'var(--font-accent)', fontStyle: 'italic' }}>
               experts
             </em>
           </h2>
@@ -97,12 +97,12 @@ export function TeamSection() {
               {/* Text */}
               <div className="px-2 text-center">
                 <h3
-                  className="text-lg font-bold tracking-widest text-[#141A22] mb-1"
+                  className="text-lg font-bold tracking-widest text-navy-ink mb-1"
                   style={{ fontFamily: 'var(--font-display)' }}
                 >
                   {member.name}
                 </h3>
-                <p className="text-[15px] text-[#8A8F98]">
+                <p className="text-[15px] text-muted-gray">
                   {member.role}
                 </p>
               </div>

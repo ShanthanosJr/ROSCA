@@ -5,11 +5,6 @@
      Colors — Full Foreal → Seettu palette (STYLE_GUIDE.md §2)
      ────────────────────────────────────────── */
 
-  /* Dark mode canvas (existing) */
-  --color-canvas: #0B0F14;
-  --color-surface1: #12171D;
-  --color-surface2: #1A2029;
-
   /* Foreal palette mapped to Seettu */
   --color-navy-ink: #141A22;
   --color-off-white: #F4F3F1;

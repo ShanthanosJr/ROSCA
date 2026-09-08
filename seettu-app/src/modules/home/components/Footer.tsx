@@ -4,7 +4,7 @@
  */
 export function Footer() {
   return (
-    <footer className="relative bg-[#141A22] pt-24 md:pt-32 pb-8 overflow-hidden">
+    <footer className="relative bg-navy-ink pt-24 md:pt-32 pb-8 overflow-hidden">
       
       {/* Massive ghost text background */}
       <div 
@@ -25,7 +25,7 @@ export function Footer() {
             <ul className="flex flex-col gap-4">
               {['Home', 'Explore Groups', 'How It Works', 'Features', 'Success Stories', 'FAQ', 'Contact Us'].map(link => (
                 <li key={link}>
-                  <a href="#" className="text-white/60 hover:text-[#3DDC97] transition-colors text-sm font-medium">
+                  <a href="#" className="text-white/60 hover:text-accent transition-colors text-sm font-medium">
                     {link}
                   </a>
                 </li>
@@ -43,7 +43,7 @@ export function Footer() {
                  Colombo 03,<br />
                  Sri Lanka
                </p>
-               <a href="#" className="text-[#3DDC97] text-sm font-medium hover:underline">Get Directions</a>
+               <a href="#" className="text-accent text-sm font-medium hover:underline">Get Directions</a>
              </div>
 
              <div className="mb-8">
@@ -81,7 +81,7 @@ export function Footer() {
               />
               <button 
                 type="submit" 
-                className="absolute right-0 text-white/40 group-focus-within:text-[#3DDC97] hover:text-[#3DDC97] transition-colors"
+                className="absolute right-0 text-white/40 group-focus-within:text-accent hover:text-accent transition-colors"
               >
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M5 12h14M12 5l7 7-7 7" />
@@ -95,7 +95,7 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded-[10px] flex items-center justify-center" style={{ background: 'linear-gradient(135deg, #3DDC97 0%, #2BC480 100%)' }}>
+            <div className="w-8 h-8 rounded-[10px] flex items-center justify-center bg-gradient-to-br from-accent to-[#2BC480]">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <circle cx="12" cy="12" r="10" />
                 <path d="M12 6v6l4 2" />

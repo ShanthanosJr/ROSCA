@@ -20,7 +20,7 @@ export function InquiryFormSection() {
   }, []);
 
   return (
-    <section ref={ref} id="contact" className="relative py-24 md:py-40 bg-[#141A22] overflow-hidden min-h-[900px] flex items-center">
+    <section ref={ref} id="contact" className="relative py-24 md:py-40 bg-navy-ink overflow-hidden min-h-[900px] flex items-center">
       
       {/* Full Width Background Image */}
       <div className="absolute inset-0 z-0">
@@ -29,7 +29,7 @@ export function InquiryFormSection() {
           alt="Community meeting"
           className="w-full h-full object-cover opacity-30 mix-blend-overlay"
         />
-        <div className="absolute inset-0 bg-[#141A22]/40" />
+        <div className="absolute inset-0 bg-navy-ink/40" />
       </div>
 
       {/* Main Content - Floating Box */}
@@ -40,7 +40,7 @@ export function InquiryFormSection() {
           <div className="grid grid-cols-1 md:grid-cols-2">
             
             {/* Left Panel: Blue background with text */}
-            <div className="bg-[#1F4A57] p-10 md:p-16 flex flex-col justify-center relative overflow-hidden">
+            <div className="bg-teal-dark p-10 md:p-16 flex flex-col justify-center relative overflow-hidden">
               <span 
                 className="absolute -top-12 -left-10 text-[180px] font-extrabold leading-none text-white/5 pointer-events-none select-none"
                 style={{ fontFamily: 'var(--font-display)' }}
@@ -49,12 +49,12 @@ export function InquiryFormSection() {
               </span>
               
               <div className="relative z-10">
-                <p className="text-xs font-medium uppercase tracking-[0.2em] text-[#3DDC97] mb-6">
+                <p className="text-xs font-medium uppercase tracking-[0.2em] text-accent mb-6">
                   Get in touch
                 </p>
                 <h2 className="text-[clamp(2.5rem,5vw,3.5rem)] font-bold leading-[1.1] text-white mb-6" style={{ fontFamily: 'var(--font-display)' }}>
                   Manage{' '}
-                  <em style={{ fontFamily: 'var(--font-accent)', fontStyle: 'italic', color: '#3DDC97' }}>
+                  <em className="text-accent" style={{ fontFamily: 'var(--font-accent)', fontStyle: 'italic' }}>
                     your
                   </em>{' '}
                   community
@@ -70,48 +70,48 @@ export function InquiryFormSection() {
               <form className="flex flex-col gap-8" onSubmit={(e) => e.preventDefault()}>
                 {/* Form fields (underline style) */}
                 <div className="flex flex-col gap-2 relative">
-                  <label htmlFor="name" className="text-xs font-bold text-[#141A22] uppercase tracking-wider">Name</label>
+                  <label htmlFor="name" className="text-xs font-bold text-navy-ink uppercase tracking-wider">Name</label>
                   <input 
                     type="text" 
                     id="name"
                     placeholder="John Doe"
-                    className="w-full bg-transparent border-b border-[#141A22]/20 pb-3 text-[15px] text-[#141A22] placeholder-[#8A8F98] focus:outline-none focus:border-[#3DDC97] transition-colors"
+                    className="w-full bg-transparent border-b border-navy-ink/20 pb-3 text-[15px] text-navy-ink placeholder-muted-gray focus:outline-none focus:border-accent transition-colors"
                   />
                 </div>
 
                 <div className="flex flex-col gap-2 relative">
-                  <label htmlFor="email" className="text-xs font-bold text-[#141A22] uppercase tracking-wider">Email</label>
+                  <label htmlFor="email" className="text-xs font-bold text-navy-ink uppercase tracking-wider">Email</label>
                   <input 
                     type="email" 
                     id="email"
                     placeholder="john@example.com"
-                    className="w-full bg-transparent border-b border-[#141A22]/20 pb-3 text-[15px] text-[#141A22] placeholder-[#8A8F98] focus:outline-none focus:border-[#3DDC97] transition-colors"
+                    className="w-full bg-transparent border-b border-navy-ink/20 pb-3 text-[15px] text-navy-ink placeholder-muted-gray focus:outline-none focus:border-accent transition-colors"
                   />
                 </div>
 
                 <div className="flex flex-col gap-2 relative">
-                  <label htmlFor="phone" className="text-xs font-bold text-[#141A22] uppercase tracking-wider">Phone</label>
+                  <label htmlFor="phone" className="text-xs font-bold text-navy-ink uppercase tracking-wider">Phone</label>
                   <input 
                     type="tel" 
                     id="phone"
                     placeholder="+94 77 123 4567"
-                    className="w-full bg-transparent border-b border-[#141A22]/20 pb-3 text-[15px] text-[#141A22] placeholder-[#8A8F98] focus:outline-none focus:border-[#3DDC97] transition-colors"
+                    className="w-full bg-transparent border-b border-navy-ink/20 pb-3 text-[15px] text-navy-ink placeholder-muted-gray focus:outline-none focus:border-accent transition-colors"
                   />
                 </div>
 
                 <div className="flex flex-col gap-2 relative">
-                  <label htmlFor="message" className="text-xs font-bold text-[#141A22] uppercase tracking-wider">Message</label>
+                  <label htmlFor="message" className="text-xs font-bold text-navy-ink uppercase tracking-wider">Message</label>
                   <textarea 
                     id="message"
                     placeholder="How can we help?"
                     rows={2}
-                    className="w-full bg-transparent border-b border-[#141A22]/20 pb-3 text-[15px] text-[#141A22] placeholder-[#8A8F98] focus:outline-none focus:border-[#3DDC97] transition-colors resize-none"
+                    className="w-full bg-transparent border-b border-navy-ink/20 pb-3 text-[15px] text-navy-ink placeholder-muted-gray focus:outline-none focus:border-accent transition-colors resize-none"
                   />
                 </div>
 
                 <button 
                   type="submit"
-                  className="w-full h-14 mt-4 rounded-[999px] bg-[#141A22] text-white text-[15px] font-bold hover:bg-[#3DDC97] transition-colors duration-300"
+                  className="w-full h-14 mt-4 rounded-[999px] bg-navy-ink text-white text-[15px] font-bold hover:bg-accent transition-colors duration-300"
                 >
                   Submit Inquiry
                 </button>
