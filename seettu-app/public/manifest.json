@@ -1,0 +1,10 @@
+{
+  "name": "Seettu",
+  "short_name": "Seettu",
+  "description": "Mobile-first ROSCA management app for Sri Lankan savings circles",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0B0F14",
+  "theme_color": "#3DDC97",
+  "icons": []
+}

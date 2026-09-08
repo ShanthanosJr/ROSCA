@@ -1,0 +1,5 @@
+# Ignore design folder
+Framer_Design/
+
+# Ignore documentation markdown files outside the app root
+/*.md
