@@ -77,20 +77,20 @@ export function TestimonialCarousel() {
   };
 
   return (
-    <section className="py-24 md:py-32 bg-[#F4F3F1]">
+    <section className="py-24 md:py-32 bg-off-white">
       <div ref={sectionRef} className="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-24">
         {/* Header with navigation */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
           <div>
-            <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#8A8F98] mb-4">
+            <p className="text-sm font-medium uppercase tracking-[0.2em] text-muted-gray mb-4">
               Success Stories
             </p>
             <h2
-              className="text-[clamp(2.5rem,5vw,3.5rem)] font-bold leading-[1.1] text-[#141A22] max-w-2xl"
+              className="text-[clamp(2.5rem,5vw,3.5rem)] font-bold leading-[1.1] text-navy-ink max-w-2xl"
               style={{ fontFamily: 'var(--font-display)' }}
             >
               Trusted by communities across the{' '}
-              <em style={{ fontFamily: 'var(--font-accent)', fontStyle: 'italic', color: '#3DDC97' }}>
+              <em className="text-accent" style={{ fontFamily: 'var(--font-accent)', fontStyle: 'italic' }}>
                 country
               </em>
             </h2>
@@ -100,7 +100,7 @@ export function TestimonialCarousel() {
           <div className="hidden md:flex items-center gap-3">
             <button
               onClick={() => scroll('left')}
-              className="w-14 h-14 rounded-full border border-[rgba(20,26,34,0.12)] flex items-center justify-center bg-transparent hover:bg-[#141A22] hover:text-white hover:border-transparent transition-all duration-300 cursor-pointer text-[#141A22]"
+              className="w-14 h-14 rounded-full border border-navy-ink/10 flex items-center justify-center bg-transparent hover:bg-navy-ink hover:text-white hover:border-transparent transition-all duration-300 cursor-pointer text-navy-ink"
             >
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M15 18l-6-6 6-6" />
@@ -108,7 +108,7 @@ export function TestimonialCarousel() {
             </button>
             <button
               onClick={() => scroll('right')}
-              className="w-14 h-14 rounded-full bg-[#141A22] flex items-center justify-center text-white cursor-pointer hover:bg-[#3DDC97] hover:scale-105 transition-all duration-300"
+              className="w-14 h-14 rounded-full bg-navy-ink flex items-center justify-center text-white cursor-pointer hover:bg-accent hover:scale-105 transition-all duration-300"
             >
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M9 18l6-6-6-6" />
@@ -136,20 +136,20 @@ export function TestimonialCarousel() {
                 <div>
                   <div className="flex justify-between items-start mb-8">
                     {/* SVG Quote mark */}
-                    <svg width="40" height="40" viewBox="0 0 32 32" fill="none">
-                      <path d="M11 14H6V9H11V14ZM23 14H18V9H23V14Z" fill="#3DDC97" fillOpacity="0.2"/>
-                      <path d="M11 14C11 17 9 19 6 19M23 14C23 17 21 19 18 19" stroke="#3DDC97" strokeWidth="2" strokeLinecap="round"/>
+                    <svg width="40" height="40" viewBox="0 0 32 32" fill="none" className="text-accent">
+                      <path d="M11 14H6V9H11V14ZM23 14H18V9H23V14Z" fill="currentColor" fillOpacity="0.2"/>
+                      <path d="M11 14C11 17 9 19 6 19M23 14C23 17 21 19 18 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
                     </svg>
                     {/* Top Right Avatar */}
                     <img src={t.avatar} alt={t.name} className="w-14 h-14 rounded-full object-cover" />
                   </div>
-                  <p className="text-[19px] leading-relaxed text-[#141A22] font-medium" style={{ fontFamily: 'var(--font-display)' }}>
+                  <p className="text-[19px] leading-relaxed text-navy-ink font-medium" style={{ fontFamily: 'var(--font-display)' }}>
                     "{t.quote}"
                   </p>
                 </div>
                 <div className="mt-8">
-                  <p className="text-base font-bold text-[#141A22]">{t.name}</p>
-                  <p className="text-[13px] text-[#8A8F98] mt-1">{t.role}</p>
+                  <p className="text-base font-bold text-navy-ink">{t.name}</p>
+                  <p className="text-[13px] text-muted-gray mt-1">{t.role}</p>
                 </div>
               </div>
             ) : (
@@ -159,7 +159,7 @@ export function TestimonialCarousel() {
                 style={{ minHeight: '480px' }}
               >
                 <img src={t.image} alt={t.name} className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#141A22]/90 via-[#141A22]/20 to-transparent p-8 md:p-10 flex flex-col justify-end">
+                <div className="absolute inset-0 bg-gradient-to-t from-navy-ink/90 via-navy-ink/20 to-transparent p-8 md:p-10 flex flex-col justify-end">
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                      <div className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="white" className="ml-1">
@@ -186,7 +186,7 @@ export function TestimonialCarousel() {
             <button
               key={idx}
               className={`h-2.5 rounded-full transition-all duration-300 border-none cursor-pointer ${
-                idx === activeIndex ? 'bg-[#141A22] w-8' : 'bg-[#141A22]/20 w-2.5 hover:bg-[#141A22]/40'
+                idx === activeIndex ? 'bg-navy-ink w-8' : 'bg-navy-ink/20 w-2.5 hover:bg-navy-ink/40'
               }`}
               aria-label={`Go to slide ${idx + 1}`}
               onClick={() => {
