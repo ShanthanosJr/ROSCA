@@ -1,5 +1,4 @@
 import { useEffect, ReactNode } from 'react';
-import { supabase } from '../../shared/api/apiClient';
 import { useAppStore } from '../../store/rootStore';
 
 export function AuthProvider({ children }: { children: ReactNode }) {
@@ -7,32 +6,25 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     // Check for existing session on mount
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      if (session?.user) {
+    const token = localStorage.getItem('access_token');
+    const userStr = localStorage.getItem('user_session');
+    
+    if (token && userStr) {
+      try {
+        const user = JSON.parse(userStr);
         setUser({
-          id: session.user.id,
-          phone: session.user.phone ?? '',
-          fullName: session.user.user_metadata?.full_name ?? '',
-          role: session.user.user_metadata?.role ?? 'member',
+          id: user.id,
+          phone: user.phone ?? '',
+          fullName: user.full_name ?? '',
+          role: user.role ?? 'member',
         });
-      }
-    });
-
-    // Listen for auth state changes
-    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
-      if (session?.user) {
-        setUser({
-          id: session.user.id,
-          phone: session.user.phone ?? '',
-          fullName: session.user.user_metadata?.full_name ?? '',
-          role: session.user.user_metadata?.role ?? 'member',
-        });
-      } else {
+      } catch (e) {
+        console.error('Failed to parse user session', e);
         setUser(null);
       }
-    });
-
-    return () => subscription.unsubscribe();
+    } else {
+      setUser(null);
+    }
   }, [setUser]);
 
   return <>{children}</>;

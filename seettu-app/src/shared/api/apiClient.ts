@@ -1,16 +1,9 @@
-import { createClient } from '@supabase/supabase-js';
-
-export const supabase = createClient(
-  import.meta.env.VITE_SUPABASE_URL,
-  import.meta.env.VITE_SUPABASE_ANON_KEY
-);
+const BASE_URL = import.meta.env.VITE_API_BASE_URL ?? '/api';
 
 async function authHeader() {
-  const { data } = await supabase.auth.getSession();
-  return { Authorization: `Bearer ${data.session?.access_token ?? ''}` };
+  const token = localStorage.getItem('access_token');
+  return { Authorization: `Bearer ${token ?? ''}` };
 }
-
-const BASE_URL = import.meta.env.VITE_API_BASE_URL ?? '/api';
 
 export const apiClient = {
   async get<T>(path: string): Promise<T> {
