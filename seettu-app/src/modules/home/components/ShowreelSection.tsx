@@ -14,13 +14,13 @@ export function ShowreelSection() {
   }, []);
 
   return (
-    <section id="showreel" className="py-24 md:py-32 bg-white">
+    <section id="showreel" className="bg-white py-28 md:py-40">
       <div ref={ref} className="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-24">
         
         {/* Huge Headline */}
         <div className={`mb-16 md:mb-24 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
           <h2
-            className="text-[clamp(3rem,8vw,6.5rem)] font-extrabold leading-[1.05] text-navy-ink max-w-5xl"
+            className="max-w-5xl text-[clamp(3.4rem,8vw,7rem)] font-medium leading-[.9] tracking-[-0.07em] text-navy-ink"
             style={{ fontFamily: 'var(--font-display)' }}
           >
             Community savings should feel{' '}
@@ -32,11 +32,11 @@ export function ShowreelSection() {
 
         {/* Video Placeholder Container */}
         <div 
-          className={`relative w-full aspect-video md:aspect-[21/9] rounded-[32px] overflow-hidden shadow-2xl transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}
+          className={`relative w-full aspect-video overflow-hidden rounded-[28px] shadow-2xl transition-all duration-1000 delay-300 md:aspect-[21/9] ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}
         >
           {/* Background Image */}
           <img 
-            src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop" 
+            src="/images/hero-community.jpg" 
             alt="People planning together securely" 
             className="w-full h-full object-cover transition-transform duration-1000 hover:scale-105"
           />

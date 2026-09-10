@@ -50,7 +50,7 @@ export function FAQSection() {
   }, []);
 
   return (
-    <section id="faq" className="py-20 md:py-32 bg-off-white">
+    <section id="faq" className="bg-off-white py-28 md:py-40">
       <div ref={ref} className="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-24">
         <div className={`grid grid-cols-1 lg:grid-cols-[1fr_1.5fr] gap-12 lg:gap-16 ${
           isVisible ? 'animate-fade-in-up' : 'opacity-0'
@@ -61,7 +61,7 @@ export function FAQSection() {
               FAQ
             </p>
             <h2
-              className="text-[clamp(1.75rem,4vw,2.75rem)] font-bold leading-tight text-navy-ink mb-6"
+              className="mb-6 text-[clamp(2.6rem,5vw,4.5rem)] font-medium leading-[.9] tracking-[-0.06em] text-navy-ink"
               style={{ fontFamily: 'var(--font-display)' }}
             >
               Frequently{' '}
@@ -105,7 +105,7 @@ export function FAQSection() {
             {faqs.map((faq, i) => (
               <div
                 key={i}
-                className="bg-white rounded-[20px] overflow-hidden border border-[rgba(20,26,34,0.06)] transition-shadow duration-200 hover:shadow-[0_4px_16px_rgba(20,26,34,0.06)]"
+                className="overflow-hidden rounded-[24px] border border-[rgba(20,26,34,0.06)] bg-white transition-shadow duration-200 hover:shadow-[0_4px_16px_rgba(20,26,34,0.06)]"
               >
                 <button
                   onClick={() => setOpenIndex(openIndex === i ? null : i)}

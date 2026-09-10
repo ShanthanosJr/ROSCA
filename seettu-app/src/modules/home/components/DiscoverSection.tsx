@@ -18,12 +18,12 @@ export function DiscoverSection() {
   }, []);
 
   return (
-    <Section id="how-it-works" className="bg-powder-blue" withContainer={false}>
+    <Section id="how-it-works" className="bg-powder-blue py-28 md:py-40" withContainer={false}>
       {/* Ghost text pinned BEHIND everything at z-0, low opacity, clipped by
           the section's overflow-hidden so it never collides with content. */}
       <span
         aria-hidden
-        className="absolute z-0 top-8 left-1/2 -translate-x-1/2 text-[18vw] font-bold text-navy-ink/5 select-none whitespace-nowrap leading-none"
+        className="absolute left-1/2 top-10 z-0 -translate-x-1/2 select-none whitespace-nowrap text-[24vw] font-bold leading-none text-white/25"
       >
         Seettu
       </span>
@@ -34,7 +34,7 @@ export function DiscoverSection() {
           {steps.map((step, i) => (
             <div
               key={step.number}
-              className={`absolute left-0 w-[82%] overflow-hidden rounded-[22px] border-[10px] border-navy-ink bg-navy-ink p-7 text-white shadow-xl transition-all duration-700 md:p-9 ${i === 0 ? 'top-0' : i === 1 ? 'top-[29%] left-[12%]' : 'top-[58%] left-[5%]'} ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
+              className={`absolute left-0 w-[82%] overflow-hidden rounded-[26px] border-[8px] border-navy-ink bg-navy-ink p-7 text-white shadow-xl transition-all duration-700 md:p-9 ${i === 0 ? 'top-0' : i === 1 ? 'top-[29%] left-[12%]' : 'top-[58%] left-[5%]'} ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
               style={{ transitionDelay: `${i * 120}ms`, minHeight: i === 1 ? '230px' : '210px' }}
             >
               <div className="mb-8 flex items-start justify-between">
@@ -56,9 +56,9 @@ export function DiscoverSection() {
             Seettu digitizes traditional ROSCA savings groups. With automated tracking, transparent ledgers, and verified members, we're bringing community trust to the digital age.
           </p>
           <img
-            src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=1200&auto=format&fit=crop"
+            src="/images/hero-community.jpg"
             alt="Community savings"
-            className="mt-2 h-[320px] w-full rounded-[22px] object-cover"
+            className="mt-2 h-[320px] w-full rounded-[26px] object-cover"
           />
         </div>
       </Container>

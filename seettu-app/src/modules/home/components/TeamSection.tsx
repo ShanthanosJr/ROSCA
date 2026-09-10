@@ -10,25 +10,25 @@ const teamMembers = [
   {
     name: 'AMAYA FERNANDO',
     role: 'Community Lead',
-    image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=600&auto=format&fit=crop',
+    image: '/images/hero-community.jpg',
     offset: 'mt-0',
   },
   {
     name: 'KASUN SILVA',
     role: 'Trust & Safety',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600&auto=format&fit=crop',
+    image: '/images/hero-community.jpg',
     offset: 'mt-12 md:mt-24',
   },
   {
     name: 'NADEESHI PERERA',
     role: 'Organizer Support',
-    image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=600&auto=format&fit=crop',
+    image: '/images/hero-community.jpg',
     offset: 'mt-6 md:mt-12',
   },
   {
     name: 'RUWAN J.',
     role: 'Financial Operations',
-    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=600&auto=format&fit=crop',
+    image: '/images/hero-community.jpg',
     offset: 'mt-16 md:mt-32',
   },
 ];
@@ -47,10 +47,10 @@ export function TeamSection() {
   }, []);
 
   return (
-    <section id="team" className="relative py-24 md:py-32 overflow-hidden bg-powder-blue/30">
+    <section id="team" className="relative overflow-hidden bg-powder-blue py-28 md:py-40">
       {/* Background ghost text */}
       <div 
-        className="absolute top-20 left-1/2 -translate-x-1/2 text-[clamp(8rem,20vw,24rem)] font-extrabold text-teal-deep/5 select-none pointer-events-none leading-none tracking-tighter"
+        className="pointer-events-none absolute left-1/2 top-20 -translate-x-1/2 select-none text-[clamp(8rem,20vw,24rem)] font-extrabold leading-none tracking-tighter text-white/20"
         style={{ fontFamily: 'var(--font-display)' }}
       >
         Organizers

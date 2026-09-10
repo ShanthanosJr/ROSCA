@@ -10,7 +10,7 @@ import { Badge } from '../../../design-system/components/Badge';
 const GROUPS = [
   {
     id: 1,
-    image: 'https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=1170&auto=format&fit=crop',
+    image: '/images/hero-community.jpg',
     title: 'Office Seettu 2026',
     location: 'Colombo 03',
     frequency: 'MONTHLY',
@@ -21,7 +21,7 @@ const GROUPS = [
   },
   {
     id: 2,
-    image: 'https://images.unsplash.com/photo-1528605248644-14dd04022da1?q=80&w=1170&auto=format&fit=crop',
+    image: '/images/hero-community.jpg',
     title: 'Family & Friends Fund',
     location: 'Dehiwala',
     frequency: 'WEEKLY',
@@ -32,7 +32,7 @@ const GROUPS = [
   },
   {
     id: 3,
-    image: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=1170&auto=format&fit=crop',
+    image: '/images/hero-community.jpg',
     title: 'Entrepreneurs Circle',
     location: 'Nugegoda',
     frequency: 'MONTHLY',
@@ -43,7 +43,7 @@ const GROUPS = [
   },
   {
     id: 4,
-    image: 'https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1170&auto=format&fit=crop',
+    image: '/images/hero-community.jpg',
     title: 'Tech Startup Syndicate',
     location: 'Rajagiriya',
     frequency: 'MONTHLY',
@@ -54,7 +54,7 @@ const GROUPS = [
   },
   {
     id: 5,
-    image: 'https://images.unsplash.com/photo-1577563908411-5077b6dc7624?q=80&w=1170&auto=format&fit=crop',
+    image: '/images/hero-community.jpg',
     title: 'Neighborhood Trust',
     location: 'Mount Lavinia',
     frequency: 'BI-WEEKLY',
@@ -65,7 +65,7 @@ const GROUPS = [
   },
   {
     id: 6,
-    image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1171&auto=format&fit=crop',
+    image: '/images/hero-community.jpg',
     title: 'Alumni Network Pool',
     location: 'Colombo 07',
     frequency: 'MONTHLY',
@@ -82,17 +82,17 @@ export function ListingsSection() {
   const filteredGroups = GROUPS.filter(g => filter === 'ALL' || g.status === filter);
 
   return (
-    <section id="groups" className="bg-off-white py-24 md:py-36">
+    <section id="groups" className="bg-off-white py-28 md:py-40">
       <div className="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-24">
         
         {/* Section Header */}
-        <div className="mb-16 text-center">
+        <div className="mb-20 text-center">
           <div>
             <p className="text-sm font-medium uppercase tracking-[0.2em] text-muted-gray mb-3">
               Groups
             </p>
             <h2
-              className="text-[clamp(2.75rem,6vw,5.5rem)] font-medium leading-[.95] tracking-[-0.055em] text-navy-ink"
+              className="text-[clamp(3rem,7vw,6.5rem)] font-medium leading-[.86] tracking-[-0.07em] text-navy-ink"
               style={{ fontFamily: 'var(--font-display)' }}
             >
               Explore active savings{' '}
@@ -124,11 +124,11 @@ export function ListingsSection() {
           {filteredGroups.map((group, i) => (
             <div
               key={group.id}
-              className="overflow-hidden rounded-[18px] border border-[rgba(20,26,34,0.08)] bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(20,26,34,0.10)] animate-fade-in-up"
+              className="overflow-hidden rounded-[26px] border border-[rgba(20,26,34,0.06)] bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(20,26,34,0.10)] animate-fade-in-up"
               style={{ animationDelay: `${i * 100}ms` }}
             >
               {/* Image Header with Tags */}
-              <div className="relative aspect-[1.2] overflow-hidden bg-[#E2E8F0]">
+              <div className="relative aspect-[1.16] overflow-hidden bg-[#E2E8F0]">
                 <img
                   src={group.image}
                   alt={group.title}
@@ -145,9 +145,9 @@ export function ListingsSection() {
               </div>
 
               {/* Card Body */}
-              <div className="p-6 md:p-8">
+              <div className="p-6 md:p-7">
                 <h3
-                  className="text-2xl font-bold text-navy-ink mb-2"
+                  className="mb-3 text-[1.65rem] font-medium leading-tight text-navy-ink"
                   style={{ fontFamily: 'var(--font-display)' }}
                 >
                   {group.title}

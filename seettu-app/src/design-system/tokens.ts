@@ -14,17 +14,17 @@ export const colors = {
   navyInk: '#141A22',
   offWhite: '#F4F3F1',
   pureWhite: '#FFFFFF',
-  powderBlue: '#C7DBE3',
-  tealDeep: '#3E7B8C',
-  tealDark: '#1F4A57',
-  mustardTag: '#E7B24D',
-  mutedGray: '#8A8F98',
+  powderBlue: '#B9D9E3',
+  tealDeep: '#4D9CAF',
+  tealDark: '#3E8999',
+  mustardTag: '#F7E7C4',
+  mutedGray: '#586A73',
   hairline: 'rgba(20,26,34,0.08)',
 
   // Functional
   textPrimary: '#F5F7FA',
   textMuted: '#8A94A6',
-  accent: '#3DDC97',
+  accent: '#E87B5A',
   accentAlt: '#4C8DFF',
   warning: '#F5B942',
   danger: '#F0546B',
@@ -42,7 +42,7 @@ export const radius = {
 export const spacing = [0, 4, 8, 12, 16, 20, 24, 32, 40, 56, 72, 96, 120, 160] as const;
 
 export const fonts = {
-  sans: "'Inter', system-ui, sans-serif",
-  display: "'Plus Jakarta Sans', 'Inter', system-ui, sans-serif",
-  accent: "'Playfair Display', Georgia, 'Times New Roman', serif",
+  sans: "'Inter Tight', system-ui, sans-serif",
+  display: "'Host Grotesk', system-ui, sans-serif",
+  accent: "'Instrument Serif', Georgia, 'Times New Roman', serif",
 } as const;

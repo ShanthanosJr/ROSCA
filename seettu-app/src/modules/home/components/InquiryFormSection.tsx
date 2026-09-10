@@ -20,12 +20,12 @@ export function InquiryFormSection() {
   }, []);
 
   return (
-    <section ref={ref} id="contact" className="relative py-24 md:py-40 bg-navy-ink overflow-hidden min-h-[900px] flex items-center">
+    <section ref={ref} id="contact" className="relative flex min-h-[980px] items-center overflow-hidden bg-teal-deep py-28 md:py-40">
       
       {/* Full Width Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop"
+          src="/images/hero-community.jpg"
           alt="Community meeting"
           className="w-full h-full object-cover opacity-30 mix-blend-overlay"
         />
@@ -34,7 +34,7 @@ export function InquiryFormSection() {
 
       {/* Main Content - Floating Box */}
       <div className="relative z-10 max-w-[1440px] mx-auto px-6 md:px-12 lg:px-24 w-full">
-        <div className={`max-w-5xl mx-auto rounded-[32px] overflow-hidden shadow-2xl transition-all duration-1000 ${
+        <div className={`mx-auto max-w-5xl overflow-hidden rounded-[30px] border-[8px] border-white shadow-2xl transition-all duration-1000 ${
           isVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-16 scale-95'
         }`}>
           <div className="grid grid-cols-1 md:grid-cols-2">
@@ -129,7 +129,7 @@ export function InquiryFormSection() {
         }`}
       >
         <h2 
-          className="text-[clamp(4rem,10vw,10rem)] font-extrabold leading-[0.8] text-white/90"
+          className="text-[clamp(3rem,7vw,7rem)] font-extrabold leading-[0.86] text-white/90"
           style={{ fontFamily: 'var(--font-display)' }}
         >
           Let's build trust together

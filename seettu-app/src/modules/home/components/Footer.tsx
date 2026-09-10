@@ -4,11 +4,11 @@
  */
 export function Footer() {
   return (
-    <footer className="relative bg-navy-ink pt-24 md:pt-32 pb-8 overflow-hidden">
+    <footer className="relative overflow-hidden bg-navy-ink pb-8 pt-28 md:pt-40">
       
       {/* Massive ghost text background */}
       <div 
-        className="absolute top-1/4 left-1/2 -translate-x-1/2 text-[clamp(8rem,25vw,30rem)] font-extrabold text-white/[0.03] select-none pointer-events-none leading-none tracking-tighter"
+        className="pointer-events-none absolute left-1/2 top-1/4 -translate-x-1/2 select-none text-[clamp(8rem,25vw,30rem)] font-extrabold leading-none tracking-tighter text-white/[0.03]"
         style={{ fontFamily: 'var(--font-display)' }}
       >
         Seettu
