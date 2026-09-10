@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap');
 @import "tailwindcss";
 
 @theme {
@@ -31,8 +32,8 @@
   --radius-pill: 999px;
 
   /* Font families — §3 two-typeface pairing */
-  --font-sans: 'Inter', system-ui, sans-serif;
-  --font-display: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
+  --font-sans: 'DM Sans', system-ui, sans-serif;
+  --font-display: 'DM Sans', system-ui, sans-serif;
   --font-accent: 'Playfair Display', Georgia, 'Times New Roman', serif;
 }
 
@@ -40,8 +41,6 @@
    Base resets
    ────────────────────────────────────────── */
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
@@ -49,8 +48,21 @@ body {
   font-family: var(--font-sans);
   background-color: var(--color-off-white);
   color: var(--color-navy-ink);
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+button,
+a,
+input,
+textarea {
+  font: inherit;
+}
+
+::selection {
+  color: var(--color-pure-white);
+  background: var(--color-teal-deep);
 }
 
 /* ──────────────────────────────────────────

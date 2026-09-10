@@ -82,17 +82,17 @@ export function ListingsSection() {
   const filteredGroups = GROUPS.filter(g => filter === 'ALL' || g.status === filter);
 
   return (
-    <section id="groups" className="py-24 md:py-32 bg-off-white relative z-10 -mt-16 md:-mt-32">
+    <section id="groups" className="bg-off-white py-24 md:py-36">
       <div className="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-24">
         
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
+        <div className="mb-16 text-center">
           <div>
             <p className="text-sm font-medium uppercase tracking-[0.2em] text-muted-gray mb-3">
               Groups
             </p>
             <h2
-              className="text-[clamp(2rem,5vw,3rem)] font-bold leading-[1.1] text-navy-ink"
+              className="text-[clamp(2.75rem,6vw,5.5rem)] font-medium leading-[.95] tracking-[-0.055em] text-navy-ink"
               style={{ fontFamily: 'var(--font-display)' }}
             >
               Explore active savings{' '}
@@ -102,8 +102,7 @@ export function ListingsSection() {
             </h2>
           </div>
 
-          {/* Toggle Pills (§6.3) */}
-          <div className="inline-flex bg-white rounded-[999px] p-1 border border-[rgba(20,26,34,0.06)] shadow-sm">
+          <div className="mt-8 inline-flex rounded-[999px] border border-[rgba(20,26,34,0.10)] bg-white p-1 shadow-sm">
             {['ALL', 'OPEN', 'IN PROGRESS'].map((t) => (
               <button
                 key={t}
@@ -121,15 +120,15 @@ export function ListingsSection() {
         </div>
 
         {/* 3-Column Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {filteredGroups.map((group, i) => (
             <div
               key={group.id}
-              className="bg-white rounded-[24px] overflow-hidden border border-[rgba(20,26,34,0.06)] transition-all duration-300 hover:shadow-[0_16px_40px_rgba(20,26,34,0.08)] hover:-translate-y-1 animate-fade-in-up"
+              className="overflow-hidden rounded-[18px] border border-[rgba(20,26,34,0.08)] bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(20,26,34,0.10)] animate-fade-in-up"
               style={{ animationDelay: `${i * 100}ms` }}
             >
               {/* Image Header with Tags */}
-              <div className="relative h-64 overflow-hidden bg-[#E2E8F0]">
+              <div className="relative aspect-[1.2] overflow-hidden bg-[#E2E8F0]">
                 <img
                   src={group.image}
                   alt={group.title}

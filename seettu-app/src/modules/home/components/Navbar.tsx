@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const NAV_LINKS = [
   { label: 'Home', href: '#hero' },
   { label: 'How it Works', href: '#how-it-works' },
-  { label: 'Features', href: '#features' },
+  { label: 'Features', href: '#groups' },
   { label: 'FAQ', href: '#faq' },
 ];
 

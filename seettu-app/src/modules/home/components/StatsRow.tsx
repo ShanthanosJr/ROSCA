@@ -46,17 +46,17 @@ export function StatsRow() {
   }, []);
 
   return (
-    <section className="relative z-20 pb-20 md:pb-32 -mt-16 md:-mt-32">
+    <section className="relative z-20 bg-off-white py-8 pb-24 md:py-12 md:pb-36">
       <div
         ref={ref}
         className="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-24"
       >
         {/* Three stat cards — §6.6 */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
           {stats.map((stat, i) => (
             <div
               key={stat.label}
-              className={`${stat.bg} rounded-[24px] p-8 md:p-10 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 ${
+              className={`${stat.bg} rounded-[18px] p-8 md:min-h-[300px] md:p-10 transition-all duration-500 hover:-translate-y-1 hover:shadow-2xl ${
                 isVisible ? 'animate-fade-in-up opacity-100' : 'opacity-0 translate-y-12'
               }`}
               style={{ 
